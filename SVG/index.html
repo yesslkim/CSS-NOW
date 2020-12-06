@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    rect {
+      width: 100px;
+      height: 100px;
+    }
+
+    text {
+      font-size: 20px;
+      fill: #fff;
+    }
+
+    .r1 {
+      fill: #000;
+    }
+
+    .r2,
+    .r3 {
+      fill: red;
+      stroke-width: 20px;
+    }
+
+    .line {
+      border: 2px solid #000;
+    }
+  </style>
+  <title>SVG tag</title>
+</head>
+
+<body>
+  <!-- svg를 선언하는 방법 : svg는 컨테이너 역할을 한다. -->
+  <!-- 사각형 만드는 방법  -->
+  <svg width="200" height="200">
+    <rect class="r1" />
+  </svg>
+
+  <!-- 투명도 조절. rgba() & opacity. 
+      다른점은 rgba()는 border를 따로 줄 수 있음  -->
+  <!-- opacity로 하는 방법  -->
+  <svg width="200" height="200">
+    <rect class="r2" opacity=".5" stroke="rgba(0,0,0,0)" />
+  </svg>
+
+  <!-- rgba()로 하는 방법  -->
+  <svg width="200" height="200">
+    <rect class="r3" stroke="rgba(0,0,0,0.3)" />
+  </svg>
+
+  <!-- coordinate -->
+  <svg width="200" height="200">
+    <rect class="r3" x="20px" y="40px" />
+  </svg>
+
+  <!-- round corner & text-->
+  <svg width="200" height="200">
+    <rect class="r3" rx="20px" ry="50px" />
+    <text x="50px" y="30px">Hello</text>
+  </svg>
+
+  <svg width="200" height="200">
+    <circle r="100px" cx="20px" cy="100px" />
+  </svg>
+
+  <svg width="200" height="200">
+    <ellipse cx="60px" cy="60px" rx="60px" ry="60px" />
+  </svg>
+
+  <svg width="200px" height="200px" class="line">
+    <line x1="20" x2="0" y1="20" y2="0" stroke="red" />
+  </svg>
+</body>
+
+</html>
